@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- UNICONS -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- SWIPER CSS -->
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./assist/css/style.css" />
+
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Alaa</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">
+                <i class="uil uil-estate nav__icon"></i> Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i> About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i> Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">
+                <i class="uil uil-briefcase-alt nav__icon"></i>Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i>Portfolio
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contactme" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>Contact Me
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav_close"></i>
+        </div>
+        <div class="nav__btns">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- HOME -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-linkedin"></i>
+              </a>
+
+              <a href="#" target="_blank" class="home__social-icon">
+                <i class="uil uil-dribbble"></i>
+              </a>
+
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github"></i>
+              </a>
+            </div>
+
+            <svg class="home__blob" width="500" height="250">
+              <defs>
+                <clipPath id="circleView">
+                  <circle cx="250" cy="125" r="125" fill="#FFFFFF" />
+                </clipPath>
+              </defs>
+              <image
+                class="home__blob-img"
+                width="500"
+                height="250"
+                xlink:href="./assist/img/profile.jpg"
+                clip-path="url(#circleView)"
+              />
+            </svg>
+
+            <div class="home__data">
+              <h1 class="home__title">Hi, I'm Alaa</h1>
+              <h3 class="home__subtitle">Front-end developer</h3>
+              <p class="home__description">
+                Fresh graduate looking for an internship as a Front-end || React
+                developer
+              </p>
+              <a href="#contactme" class="button button--flex">
+                Contact Me<i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+
+            <div class="home__scroll">
+              <a href="#about" class="home__scroll-button button--flex">
+                <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                <span class="home__scroll-name">Scroll Down</span>
+                <i class="uil uil-arrow-down home__scroll-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+
+        <div class="about__container container grid">
+          <img src="./assist/img/about.jpg" alt="AboutMe" class="about__img" />
+
+          <div class="about__data">
+            <p class="about__description">
+              Fresh graduate looking for an internship as a Front-end ||
+              React.js developer, experience in building websites using HTML,
+              CSS, Bootstrap, JavaScript and React.js library, using git as
+              version control, seeking to join and be part of IT industry to
+              exchange experiences and enhance skills.
+            </p>
+
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">08+</span>
+                <span class="about__info-name">
+                  Years <br />
+                  experience
+                </span>
+              </div>
+              <div>
+                <span class="about__info-title">20+</span>
+                <span class="about__info-name">
+                  Completed <br />
+                  project
+                </span>
+              </div>
+              <div>
+                <span class="about__info-title">08+</span>
+                <span class="about__info-name">
+                  Compaanies <br />
+                  worked
+                </span>
+              </div>
+            </div>
+
+            <div class="about__buttons">
+              <a download="" href="./assist/cv/" class="button button--flex">
+                Download CV<i class="uil uil-download-alt button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <!-- QUALIFICATION -->
+      <!-- SERVICES -->
+      <!-- PORTFOLIO -->
+    </main>
+
+    <!-- FOOTER -->
+
+    <!-- SCROL TOP -->
+
+    <!-- SWIPER JS -->
+    <script src=""></script>
+
+    <!-- MAIN JS  -->
+    <script src="./assist/js/script.js"></script>
+  </body>
+</html>
+
+<!-- <div class="home__img">
+              <svg
+                width="600"
+                height="600"
+                viewBox="0 0 600 600"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g transform="translate(300,300)">
+                  <path
+                    d="M136.4,-195.1C180.5,-183.9,222.6,-152.4,240.8,-110.6C259,-68.7,253.2,-16.6,245.9,35.4C238.5,87.5,229.6,139.3,200.5,174.8C171.4,210.3,122.2,229.4,72.7,240.9C23.2,252.3,-26.6,256.2,-65.1,237.6C-103.6,219,-130.8,177.9,-160.8,140.7C-190.8,103.5,-223.6,70.2,-228.9,32.9C-234.3,-4.4,-212.2,-45.6,-196.2,-93.4C-180.3,-141.2,-170.4,-195.5,-138.7,-212.4C-107,-229.2,-53.5,-208.6,-3.7,-202.9C46.1,-197.1,92.3,-206.2,136.4,-195.1Z"
+                    fill="#abb8c3"
+                  />
+                  <img class="home__blob-img" xlink:href="assist/img/profile.jpg">
+                </g>
+              </svg>
+            </div> -->
