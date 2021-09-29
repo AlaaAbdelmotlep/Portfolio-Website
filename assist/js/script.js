@@ -132,6 +132,91 @@ modalCloses.forEach((modalClose) => {
   });
 });
 
-// ************************ PROTOFOLIO SWIPER **********************
+// ************************ SCROLL SECTION ACTIVE LINK **********************
 
-// ************************ TESTIMONIAL **********************
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);
+
+// ************************ CHANGE BACKGROUND HEADER **********************
+function scrollHeader() {
+  const nav = document.getElementById("header");
+
+  // when scroll greater than 200 viewPort height , add scroll header class to header tag
+  if (this.scrollY >= 80) {
+    nav.classList.add("scroll-header");
+  } else {
+    nav.classList.remove("scroll-header");
+  }
+}
+window.addEventListener("scroll", scrollHeader);
+
+// ************************ SHOW SCROLL UP **********************
+
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+
+  // when scroll greater than 560 viewPort height , add show-scroll class to tag with scrollTop class
+  if (this.scrollY >= 560) {
+    scrollUp.classList.add("show-scroll");
+  } else {
+    scrollUp.classList.remove("show-scroll");
+  }
+}
+window.addEventListener("scroll", scrollUp);
+
+// ************************ DARK LIGHT THEME **********************
+
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "uil-sun";
+
+// previously sselected topic (if user selected)
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+// we obtain the current theme , the interface has by validating the dark-theme class
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+
+// validate if user prev choose topic
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+    iconTheme
+  );
+}
+
+// Toggol themes manually
+themeButton.addEventListener("click", () => {
+  // add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+
+  // save the theme and icon that user choose
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
